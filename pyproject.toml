@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "balonlama"
+version = "0.1.0"
+description = "PDF teknik resim balonlama ve ölçüm raporu oluşturma aracı"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+  "pdfplumber>=0.10.3",
+]
+
+[project.scripts]
+balonlama = "balonlama.cli:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
